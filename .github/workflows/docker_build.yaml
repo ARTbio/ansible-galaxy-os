@@ -3,17 +3,15 @@ on:
   push:
     branches-ignore:
       - master   # excludes master
-env:
-  IMG1: bionic
-  IMG2: trusty
-  IMG2: xenial
   
 jobs:
   buildx:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        IMG: [${{IMG1}}, ${{IMG2}}, ${{IMG3}}]
+        image: [xenial, trusty, bionic]
+    env:
+      IMG: ${{ matrix.image }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
