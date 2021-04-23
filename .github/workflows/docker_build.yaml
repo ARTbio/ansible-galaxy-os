@@ -3,13 +3,17 @@ on:
   push:
     branches-ignore:
       - master   # excludes master
+env:
+  IMG1: bionic
+  IMG2: trusty
+  IMG2: xenial
   
 jobs:
   buildx:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        img: ['bionic', 'trusty', 'xenial']
+        IMG: [$IMG1, $IMG2, $IMG3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,4 +23,4 @@ jobs:
           install: true
       - name: Build
         run: |
-          docker build -f Dockerfile.ubuntu.${{img}} .
+          docker build -f Dockerfile.ubuntu.${{IMG}} .
