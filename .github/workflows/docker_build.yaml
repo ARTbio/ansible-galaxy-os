@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        IMG: [$IMG1, $IMG2, $IMG3]
+        IMG: [${{IMG1}}, ${{IMG2}}, ${{IMG3}}]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
