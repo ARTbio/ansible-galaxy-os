@@ -13,7 +13,7 @@
     repo: ppa:natefoo/slurm-drmaa
     state: present
     update_cache: yes
-  when: ansible_distribution_version == "18.04" or ansible_distribution_version == "20.04"
+  when: ansible_distribution_version == "18.04" # or ansible_distribution_version == "20.04"
 
 - name: Add Docker repository key (Ubuntu 14.04)
   apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
