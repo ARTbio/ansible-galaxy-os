@@ -80,7 +80,7 @@
       - zlib1g-dev
     state: "{{ package_state }}"
     install_recommends: no
-    when: "ansible_distribution_version is version('18.04', '<=')"
+  when: "ansible_distribution_version is version('18.04', '<=')"
 
 
 - name: Install required system packages for Ubuntu 20.04
@@ -122,7 +122,7 @@
       - zlib1g-dev
     state: "{{ package_state }}"
     install_recommends: no
-    when: "ansible_distribution_version is version( '20.04', '==')"
+  when: "ansible_distribution_version is version( '20.04', '==')"
 
 
 
