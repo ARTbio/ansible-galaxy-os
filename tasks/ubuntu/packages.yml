@@ -8,7 +8,7 @@
   copy: src=galaxyproject-nginx-pin-600 dest=/etc/apt/preferences.d/galaxyproject-nginx-pin-600
   when: ansible_distribution_version <= "16.04"
 
-- name: Add custom Galaxy PPA (used for Slurm DRMAA package in Ubuntu 18.04)
+- name: Add custom Galaxy PPA (used for Slurm DRMAA package in Ubuntu 18.04 and 20.04)
   apt_repository: 
     repo: ppa:natefoo/slurm-drmaa
     state: present
