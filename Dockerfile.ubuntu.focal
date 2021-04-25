@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transport-https  dirmngr software-properties-common && \
+RUN apt-get -qq update && apt-get install --no-install-recommends -y apt-transport-https  dirmngr gnupg software-properties-common && \
     apt-add-repository -y ppa:ansible/ansible && \
     apt-get -qq update && \
     apt-get -qq install ansible && \
