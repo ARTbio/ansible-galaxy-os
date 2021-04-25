@@ -109,8 +109,7 @@
       - python3-boto
       - python-dev
       - python3-prettytable
-#      - python3-psycopg2
-      - psycopg2-binary
+      - python3-psycopg2
       - python3-virtualenv
       - python-pip-whl
       - rsync
