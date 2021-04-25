@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image: [xenial, bionic, focal]
+        image: [trusty, xenial, bionic, focal]
     env:
       IMG: ${{ matrix.image }}
     steps:
