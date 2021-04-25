@@ -137,7 +137,6 @@
     pkg:
       - atop
       - bioperl
-      - ipython
       - iotop
       - htop
       - iftop
@@ -145,6 +144,12 @@
       - vim
     state: "{{ package_state }}"
   when: install_maintainance_packages
+
+- name: install ipython package for Ubuntu < 20.04
+  apt:
+    pkg:
+      - ipython
+  when: "ansible_distribution_version is version( '20.04', '<')"
 
 - name: Install required system packages - 14.04
   apt:
