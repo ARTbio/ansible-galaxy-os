@@ -10,7 +10,7 @@
 - name: Add postgres user
   user:
     name: "{{ postgres_user_name }}"
-    uid: {{ postgres_user_uid |integer }}
+    uid: "{{ postgres_user_uid |integer }}"
     group: "{{ postgres_user_gid }}"
     home: "{{ postgres_user_home }}"
     system: yes
@@ -18,7 +18,7 @@
 - name: Add galaxy user
   user:
     name: "{{ galaxy_user_name }}"
-    uid: {{ galaxy_user_uid |integer}}
+    uid: "{{ galaxy_user_uid |integer}}"
     group: "{{ galaxy_user_gid }}"
     home: "{{ galaxy_user_home }}"
     shell: "{{ galaxy_user_shell }}"
